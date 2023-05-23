@@ -1,0 +1,33 @@
+{
+  "name": "@smelterial/shared-config",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./svelte": {
+      "default": "./dist/svelte.js",
+      "types": "./dist/svelte.d.ts"
+    },
+    "./vite": {
+      "default": "./dist/vite.js",
+      "types": "./dist/vite.d.ts"
+    },
+    "./prettier": {
+      "default": "./dist/prettier.cjs",
+      "types": "./dist/prettier.d.cts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "prettier --plugin-search-dir ../../ --ignore-path ../../.prettierignore --config ../../.prettierrc --check ."
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-vercel": "^2.4.3",
+    "@sveltejs/kit": "^1.18.0",
+    "@types/node": "^20.2.3",
+    "@types/prettier": "^2.7.2",
+    "prettier": "^2.8.8",
+    "svelte": "^3.59.1",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.8"
+  }
+}
