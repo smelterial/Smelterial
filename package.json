@@ -1,0 +1,30 @@
+{
+  "name": "smelterial",
+  "private": true,
+  "license": "GPL-3.0",
+  "type": "module",
+  "scripts": {
+    "ensure-license": "node ./scripts/ensure-license.js",
+    "postinstall": "pnpm ensure-license && echo \"Keep Smelterial up-to-date: run \\`pnpm update -r\\`\"",
+    "build": "turbo build --filter=!*-TODO && pnpm postinstall",
+    "lint": "turbo lint --filter=!*-TODO && pnpm postinstall",
+    "format": "turbo format --filter=!*-TODO && pnpm postinstall",
+    "check": "turbo check --filter=!*-TODO && pnpm postinstall",
+    "sync": "turbo sync --filter=!*-TODO && pnpm postinstall",
+    "test": "turbo test --filter=!*-TODO && pnpm postinstall",
+    "all": "turbo lint --filter=[HEAD^1] --filter=!*-TODO && turbo test --filter=[HEAD^1] --filter=!*-TODO && pnpm postinstall",
+    "dev": "echo \"STARTING ALL DEV SERVERS\nUsing \\`--filter=\\\"<app name>\\\"\\` is recommended\" && sleep 1 && turbo dev --filter=!*-TODO",
+    "commit": "gitmoji -c",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@smelterial/shared-config": "workspace:*",
+    "@types/node": "^20.2.3",
+    "all-contributors-cli": "^6.25.1",
+    "gitmoji-cli": "^8.2.3",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8",
+    "prettier-plugin-svelte": "^2.10.0",
+    "turbo": "^1.9.8"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "projectName": "Smelterial",
+  "projectOwner": "Smelterial",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 80,
+  "commit": false,
+  "commitConvention": "gitmoji",
+  "contributors": [
+    {
+      "login": "WillsterJohnson",
+      "name": "Willster Johnson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85991558?v=4",
+      "profile": "https://github.com/WillsterJohnson",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "contributorsSortAlphabetically": false,
+  "badgeTemplate": "  <a href=\"#contributing-and-contributors\">\n    <img\n      src=\"https://img.shields.io/github/all-contributors/smelterial/smelterial?color=FF3E00&style=flat-square\"\n      alt=\"Smelterial has <%= contributors.length %> contributors\"\n    />\n  </a>\n  ",
+  "linkToUsage": true
+}

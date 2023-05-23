@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "node16",
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true
+  },
+  "include": [
+    "./*.js",
+    "./*.cjs",
+    "./.prettierrc.cjs", // what the fuck?
+    "**/*.js",
+    "**/*.cjs"
+  ],
+  "exclude": ["apps/*", "packages/*"]
+}
