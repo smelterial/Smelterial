@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "prettier --plugin-search-dir ../../ --ignore-path ../../.prettierignore --config ../../.prettierrc --check ."
+    "lint": "prettier --ignore-path ../../.prettierignore --check ."
   },
   "devDependencies": {
     "@sveltejs/adapter-vercel": "^2.4.3",
