@@ -1,0 +1,27 @@
+{
+  "sfc": {
+    "prefix": ["svelte", "component", "sfc", "m3component"],
+    "body": [
+      "<!--",
+      "@component ${1:Component mame}",
+      "",
+      "@see [Material You Documentation](https://m3.MaterialSymbol.io/${2:~TODO~})",
+      "",
+      "${3:Component description}",
+      "-->",
+      "",
+      "<script lang=\"ts\">",
+      "  $4",
+      "</script>",
+      "",
+      "$5",
+      "",
+      "<style lang=\"scss\">",
+      "  $6",
+      "</style>",
+      ""
+    ],
+    "description": "Creates a Svelte component with a doccomment",
+    "scope": "svelte"
+  }
+}

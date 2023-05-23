@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+if env | grep -q "gitmoji"; then
+  echo "Thanks for using gitmoji!"
+  sleep 0.5
+else
+  echo "Please use gitmoji for commits. Try \`pnpm commit\`"
+  exit 1
+fi
+
+COMMITS_SINCE_PUSH=$(git log --pretty=oneline @{push}.. | wc -l)
+
+if [ "$COMMITS_SINCE_PUSH" -gt 5 ]; then
+  echo "";
+  echo "\t\033[0;36mYou have made several commits since your last push.\033[0m";
+  echo "\t\033[0;36mTo ensure your code passes all checks, push your changes or run \`pnpm all\`.\033[0m";
+  echo "";
+fi
