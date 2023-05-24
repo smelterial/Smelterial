@@ -23,6 +23,10 @@
     ".": {
       "svelte": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./showcase":{
+      "svelte": "./dist/showcase/+page.svelte",
+      "types": "./dist/showcase/+page.svelte.d.ts"
     }
   },
   "dependencies": {

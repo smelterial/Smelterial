@@ -27,7 +27,7 @@ export const componentConfig: Config = {
   kit: {
     files: {
       lib: "src",
-      routes: "showcase",
+      routes: "src/showcase",
       appTemplate: "app.html",
     },
   },
