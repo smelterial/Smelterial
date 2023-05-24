@@ -1,3 +1,6 @@
-import { viteConfig } from "@smelterial/shared-config/vite";
+import { sveltekit } from "@sveltejs/kit/vite";
+import { defineConfig } from "vite";
 
-export default viteConfig;
+export default defineConfig({
+  plugins: [sveltekit()],
+});
