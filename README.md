@@ -18,13 +18,24 @@
 <div align="center">
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
   <a href="#contributing-and-contributors">
-       <img
-      src="https://img.shields.io/github/all-contributors/smelterial/smelterial/trunk?logoColor=FF3E00&style=for-the-badge"
+    <img
+      src="https://img.shields.io/github/all-contributors/smelterial/smelterial/trunk?color=FF3E00&style=for-the-badge"
       alt="Smelterial has 1 contributors"
     />
   </a>
-
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+  <a href="https://smelterial.dev/">
+    <img
+      src="https://img.shields.io/github/deployments/Smelterial/Smelterial/production?label=smelterial.dev&logo=vercel&style=for-the-badge"
+      alt="Smelterial.dev deployment status"
+    />
+  </a>
+  <a href="#license">
+    <img
+      src="https://img.shields.io/badge/License-GPL--3.0-FF3E00?style=for-the-badge&logo=gnu"
+      alt="Smelterial packages are typically licensed under the GNU General Public License v3.0"
+    />
+  </a>
 </div>
 
 ---
