@@ -1,5 +1,6 @@
 **/.svelte-kit
 **/.turbo
+**/.vercel
 **/dist
 **/node_modules
 .DS_Store
