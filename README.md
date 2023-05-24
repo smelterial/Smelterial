@@ -19,7 +19,7 @@
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
   <a href="#contributing-and-contributors">
        <img
-      src="https://img.shields.io/github/all-contributors/smelterial/smelterial?color=FF3E00&style=flat-square"
+      src="https://img.shields.io/github/all-contributors/smelterial/smelterial/trunk?logoColor=FF3E00&style=for-the-badge"
       alt="Smelterial has 1 contributors"
     />
   </a>

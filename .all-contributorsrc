@@ -22,6 +22,6 @@
   ],
   "contributorsPerLine": 7,
   "contributorsSortAlphabetically": false,
-  "badgeTemplate": "  <a href=\"#contributing-and-contributors\">\n    <img\n      src=\"https://img.shields.io/github/all-contributors/smelterial/smelterial?color=FF3E00&style=flat-square\"\n      alt=\"Smelterial has <%= contributors.length %> contributors\"\n    />\n  </a>\n  ",
+  "badgeTemplate": "  <a href=\"#contributing-and-contributors\">\n    <img\n      src=\"https://img.shields.io/github/all-contributors/smelterial/smelterial/trunk?logoColor=FF3E00&style=for-the-badge\"\n      alt=\"Smelterial has <%= contributors.length %> contributors\"\n    />\n  </a>\n  ",
   "linkToUsage": true
 }
