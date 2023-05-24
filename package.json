@@ -14,7 +14,6 @@
     "test": "turbo test --filter=!*-TODO && pnpm postinstall",
     "all": "turbo lint --filter=[HEAD^1] --filter=!*-TODO && turbo test --filter=[HEAD^1] --filter=!*-TODO && pnpm postinstall",
     "dev": "echo \"STARTING ALL DEV SERVERS\nUsing \\`--filter=\\\"<app name>\\\"\\` is recommended\" && sleep 1 && turbo dev --filter=!*-TODO",
-    "commit": "gitmoji -c",
     "prepare": "husky install"
   },
   "devDependencies": {

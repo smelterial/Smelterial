@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# gitmoji as a commit hook
+if pnpm -v >&/dev/null
+then
+  exec < /dev/tty
+  pnpm gitmoji --hook $1 $2
+else
+  exec < /dev/tty
+  gitmoji --hook $1 $2
+fi
