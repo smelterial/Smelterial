@@ -22,6 +22,12 @@ coming soon:
   The theme component can utilize any supported CSS color format, image
   elements, image URLs, or HCT strings to create your application's palette.
 
+  When the them component is acting globally, it will also apply several
+  non-material utility classes to the document, such as `.sr-only`, which are
+  used throughout Smelterial's Material You components. This helps to reduce
+  redundant code, removing unnecessary bloat from your application. You can also
+  use these classes yourself, reducing your workload.
+
 ## Kit Utils
 
 Kit Utils are utilities for SvelteKit+Vite projects. They stand entirely
