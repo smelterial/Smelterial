@@ -41,7 +41,7 @@ child of the component.
    *
    * Defaults to the name of the icon, with underscores replaced with spaces.
    */
-  export let altText = name.split("_").join(" ");
+  export let alt = name.split("_").join(" ");
 
   const ctx = iconContext.get();
 
@@ -95,7 +95,7 @@ child of the component.
   class={getClass(style)}
   style="font-variation-settings: 'FILL' {+fill}, 'wght' {weight}, 'GRAD' {grade}, 'opsz' {size}"
 >
-  <span class="sr-only">{altText}</span>
+  <span class="sr-only">{alt}</span>
   <span aria-hidden="true">
     <slot>
       {name ||
