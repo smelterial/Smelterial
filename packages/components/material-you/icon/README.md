@@ -88,7 +88,5 @@ you can make the following changes to use that instead:
   const classname = "my-custom-icon-set";
 </script>
 
-<Icon style="custom__{classname}">
-  ligature_text_here
-</Icon>
+<Icon style="custom__{classname}">ligature_text_here</Icon>
 ```
