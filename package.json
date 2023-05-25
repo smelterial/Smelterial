@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@smelterial/shared-config": "workspace:*",
-    "@types/node": "^20.2.3",
+    "@types/node": "^20.2.4",
     "all-contributors-cli": "^6.25.1",
     "gitmoji-cli": "^8.2.3",
     "husky": "^8.0.3",
