@@ -19,6 +19,9 @@ See an interactive showcase of this component on the [Smelterial Showcase].
 
 ## Usage
 
+You-Icon includes the woff2 files and accompanying CSS for Google's Material Symbols internally,
+meaning there's no need to link them manually. Only icon styles which are used are included.
+
 ```svelte
 <script>
   import Icon from "@Smelterial/you-icon/Icon.svelte";
