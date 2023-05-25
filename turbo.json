@@ -14,13 +14,9 @@
       "dependsOn": ["build"]
     },
     "lint": {
-      "dependsOn": ["sync"]
     },
     "@smelterial/shared-config#lint": {
       "dependsOn": ["build"]
-    },
-    "format": {
-      "dependsOn": ["sync"]
     },
     "check": {
       "dependsOn": ["sync"]
