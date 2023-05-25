@@ -1,0 +1,6 @@
+**/*
+!dist/**/*.ts
+!dist/**/*.js
+!dist/**/*.svelte
+!dist/**/*.woff2
+!dist/**/*.css
