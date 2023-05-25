@@ -2,6 +2,8 @@ import { getContext, setContext } from "svelte";
 
 export type IconStyle = "outlined" | "rounded" | "sharp" | `custom__${string}`;
 
+export type IconFill = boolean | 0 | 1 | `${0 | 1}`;
+
 export type IconSize = 20 | 24 | 40 | 48 | `${20 | 24 | 40 | 48}`;
 
 export type IconWeight =
@@ -19,7 +21,7 @@ export type IconGrade = number | `${number}`;
 export type IconContext =
   | {
       style: IconStyle;
-      fill: boolean;
+      fill: IconFill;
       weight: IconWeight;
       size: IconSize;
       grade: IconGrade;
