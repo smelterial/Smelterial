@@ -76,3 +76,19 @@ meaning there's no need to link them manually. Only icon styles which are used a
   <slot />
 </IconConfig>
 ```
+
+If you have a custom icon set which adhere's to the same specification as Google's Material Symbols,
+you can make the following changes to use that instead:
+
+```svelte
+<script>
+  import Icon from "@Smelterial/you-icon/Icon.svelte";
+  import IconConfig from "@Smelterial/you-icon/IconConfig.svelte";
+
+  const classname = "my-custom-icon-set";
+</script>
+
+<Icon style="custom__{classname}">
+  ligature_text_here
+</Icon>
+```
