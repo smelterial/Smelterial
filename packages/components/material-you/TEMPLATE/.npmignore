@@ -1,0 +1,4 @@
+**/*
+!dist/**/*.ts
+!dist/**/*.js
+!dist/**/*.svelte
