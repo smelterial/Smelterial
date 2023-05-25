@@ -42,7 +42,7 @@ meaning there's no need to link them manually. Only icon styles which are used a
 <!--
   alt text is important! The semantic meaning of your use of an icon may differ
   from what the ligature text would otherwise suggest.
-  see https://fonts.google.com/icons?icon.query=deployed_code_history
+  See https://fonts.google.com/icons?icon.query=deployed_code_history
 -->
 <Icon
   name="deployed_code_history"
@@ -52,6 +52,14 @@ meaning there's no need to link them manually. Only icon styles which are used a
   size={24}
   grade={0}
 />
+
+<!--
+  Available styles are outlined, rounded, or sharp.
+  See https://fonts.google.com/icons for info
+-->
+<Icon style="outlined" />
+<Icon style="rounded" />
+<Icon style="sharp" />
 
 <!--
   You can use IconConfig to apply styling defaults to all icons within it
