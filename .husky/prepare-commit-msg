@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-# gitmoji as a commit hook
+
+if [ "$PRIVATE_NO_HOOKS" = "true" ]; then
+  exit 0
+fi
+
 if pnpm -v >&/dev/null
 then
   exec < /dev/tty
