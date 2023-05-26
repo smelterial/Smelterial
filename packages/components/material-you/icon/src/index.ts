@@ -1,2 +1,10 @@
 export type { MaterialSymbols } from "./symbols.js";
-export type { IconFill, IconStyle, IconSize, IconWeight, IconGrade } from "./context.js";
+export type {
+  IconFill,
+  IconStyle,
+  IconSize,
+  IconWeight,
+  IconGrade,
+  IconContext,
+  defaultIconContext,
+} from "./Icon.svelte";

@@ -19,13 +19,14 @@ See an interactive showcase of this component on the [Smelterial Showcase].
 
 ## Usage
 
-You-Icon includes the woff2 files and accompanying CSS for Google's Material Symbols internally,
-meaning there's no need to link them manually. Only icon styles which are used are included.
+Include links to the Material Symbols styles in your app template.
+
+> In future, You-Icon will include the woff2 files and accompanying CSS for Google's Material
+> Symbols internally. Only icon styles which are used are included.
 
 ```svelte
 <script>
   import Icon from "@Smelterial/you-icon/Icon.svelte";
-  import IconConfig from "@Smelterial/you-icon/IconConfig.svelte";
 </script>
 
 <!--
@@ -62,10 +63,10 @@ meaning there's no need to link them manually. Only icon styles which are used a
 <Icon style="sharp" />
 
 <!--
-  You can use IconConfig to apply styling defaults to all icons within it
+  You can use `configMode` to apply styling defaults to all icons within it
   (including children of the current page/component)
 -->
-<IconConfig fill weight="500" size="40" grade="200">
+<Icon configMode fill weight="500" size="40" grade="200">
   <!-- Filled, weight 500, size 40, grade 200 -->
   <Icon />
   <!-- Not filled, weight 500, size 40, grade 200 -->
@@ -74,7 +75,7 @@ meaning there's no need to link them manually. Only icon styles which are used a
   <Icon size="24" weight={200} />
   <!-- everything passed into the slot(s) inherit these defaults -->
   <slot />
-</IconConfig>
+</Icon>
 ```
 
 If you have a custom icon set which adhere's to the same specification as Google's Material Symbols,
@@ -83,7 +84,6 @@ you can make the following changes to use that instead:
 ```svelte
 <script>
   import Icon from "@Smelterial/you-icon/Icon.svelte";
-  import IconConfig from "@Smelterial/you-icon/IconConfig.svelte";
 
   const classname = "my-custom-icon-set";
 </script>
