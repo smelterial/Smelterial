@@ -5,7 +5,7 @@
   "description": "Easy access to Google's Material Symbols. A simple API, fully typed right, down to the icon names.",
   "type": "module",
   "scripts": {
-    "build": "svelte-package && node scripts/getFonts.js",
+    "build": "svelte-package",
     "dev": "vite dev",
     "lint": "prettier --ignore-path ../../../../.prettierignore --check .",
     "check": "svelte-check --tsconfig ./tsconfig.json",

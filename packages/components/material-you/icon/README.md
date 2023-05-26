@@ -19,8 +19,10 @@ See an interactive showcase of this component on the [Smelterial Showcase].
 
 ## Usage
 
-You-Icon includes the woff2 files and accompanying CSS for Google's Material Symbols internally,
-meaning there's no need to link them manually. Only icon styles which are used are included.
+Include links to the Material Symbols styles in your app template.
+
+> In future, You-Icon will include the woff2 files and accompanying CSS for Google's Material
+> Symbols internally. Only icon styles which are used are included.
 
 ```svelte
 <script>

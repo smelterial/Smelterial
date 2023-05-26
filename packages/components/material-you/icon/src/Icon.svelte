@@ -127,8 +127,6 @@ child of the component.
    */
   export let style = ctx.style;
 
-  $: import(`./fonts/${style}.css`);
-
   /**
    * Whether the Icon should be filled or not.
    *
