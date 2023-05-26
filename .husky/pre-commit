@@ -1,9 +1,11 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+git config --local hooks.allowBypass false
+
 COMMITS_SINCE_PUSH=$(git log --pretty=oneline @{push}.. | wc -l)
 
-if [ "$COMMITS_SINCE_PUSH" -gt 5 ]; then
+if [ "$COMMITS_SINCE_PUSH" -gt 0 ] && [ "$(($COMMITS_SINCE_PUSH % 5))" -eq 0 ]; then
   echo "";
   echo "\t\033[0;36mYou have made several commits since your last push.\033[0m";
   echo "\t\033[0;36mTo ensure your code passes all checks, push your changes or run \`pnpm all\`.\033[0m";
