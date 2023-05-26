@@ -4,19 +4,18 @@
     "moduleResolution": "node16",
     "module": "esnext",
     "target": "esnext",
-    "allowJs": false,
-    "checkJs": false,
+    "allowJs": true,
+    "checkJs": true,
     "noEmit": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "strict": true,
-    "removeComments": false
+    "strict": true
   },
   "include": [
-    "./.svelte-kitambient.d.ts",
+    "./.svelte-kit/ambient.d.ts",
     "./.svelte-kit/types/**/$types.d.ts",
     "./src/**/*.js",
     "./src/**/*.ts",
