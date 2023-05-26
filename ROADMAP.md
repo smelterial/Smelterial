@@ -10,11 +10,6 @@ still being added.
 Sorted by soonest planned release, here's a shortlist of components that are
 coming soon:
 
-- `@smelterial/you-icon`
-
-  The icon component will allow easy zero-setup access to Google's Material
-  Symbols. A simple API, fully typed right down to the icon names.
-
 - `@smelterial/you-theme`
 
   The theme component will apply Material You colors to everything which sits
