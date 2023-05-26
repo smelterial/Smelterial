@@ -18,6 +18,8 @@ Here's a list of everything that needs filling in:
 - README.md h1
 - README.md description
 - package.json name
+- package.json version
+- package.json private
 - package.json description
 - package.json keyword
 <!-- / template info -->

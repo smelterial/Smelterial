@@ -1,14 +1,15 @@
 {
   "name": "@smelterial/you-TODO",
   "license": "GPL-3.0",
-  "version": "0.1.0",
+  "version": "0.0.0",
+  "private": true,
   "description": "TODO",
   "type": "module",
   "scripts": {
     "build": "svelte-package",
     "dev": "vite dev",
     "lint": "prettier --ignore-path ../../../../.prettierignore --check .",
-    "check": "pnpm sync && svelte-check --tsconfig ./tsconfig.json",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
     "sync": "svelte-kit sync"
   },
   "keywords": [
@@ -24,7 +25,7 @@
       "svelte": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./showcase":{
+    "./showcase": {
       "svelte": "./dist/showcase/+page.svelte",
       "types": "./dist/showcase/+page.svelte.d.ts"
     }

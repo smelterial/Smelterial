@@ -1,4 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+git config --local hooks.allowBypass false
+
 pnpm all || exit 1
+
+echo ""
+echo "\t\033[0;36mRun \033[0;0m\`\033[0;32mpnpm changeset\033[0;0m\`\033[0;36m if you have modified any packages.\033[0m"

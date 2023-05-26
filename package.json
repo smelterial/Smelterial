@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "ensure-license": "node ./scripts/ensure-license.js",
-    "postinstall": "pnpm ensure-license && echo \"Keep Smelterial up-to-date: run \\`pnpm update -r\\`\"",
+    "postinstall": "pnpm ensure-license && echo \"\t\\033[0;36mKeep Smelterial up-to-date: run \\033[0;0m\\`\\033[0;32mpnpm update -r\\033[0;0m\\`\\033[0m\"",
     "build": "turbo build --filter=!*-TODO",
     "lint": "turbo lint --filter=!*-TODO",
     "check": "turbo check --filter=!*-TODO",
@@ -13,9 +13,11 @@
     "test": "turbo test --filter=!*-TODO",
     "all": "turbo lint --filter=[HEAD^1] --filter=!*-TODO && turbo test --filter=[HEAD^1] --filter=!*-TODO && pnpm postinstall",
     "dev": "echo \"STARTING ALL DEV SERVERS\nUsing \\`--filter=\\\"<app name>\\\"\\` is recommended\" && sleep 1 && turbo dev --filter=!*-TODO",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "pnpm all && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
     "@smelterial/shared-config": "workspace:*",
     "@types/node": "^20.2.4",
     "all-contributors-cli": "^6.25.1",
