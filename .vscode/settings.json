@@ -1,0 +1,41 @@
+{
+  "[css][html][javascript][json][jsonc][markdown][svelte][typescript][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "editor.rulers": [
+    {
+      // markdown README.md
+      "color": "#8888",
+      "column": 75
+    },
+    {
+      // markdown *.md
+      "color": "#8888",
+      "column": 80
+    },
+    {
+      // any *.*
+      "color": "#8888",
+      "column": 100
+    }
+  ],
+  "prettier.singleQuote": false,
+  "prettier.trailingComma": "all",
+  "prettier.useTabs": false,
+  "svelte.enable-ts-plugin": true,
+  "svelte.plugin.css.colorPresentations.enable": true,
+  "svelte.plugin.css.completions.emmet": true,
+  "svelte.plugin.css.documentColors.enable": true,
+  "svelte.plugin.css.globals": "./src/assets/*.css",
+  "svelte.plugin.svelte.defaultScriptLanguage": "ts",
+  "svelte.plugin.svelte.format.config.printWidth": 100,
+  "svelte.plugin.svelte.format.config.singleQuote": false,
+  "svelte.plugin.svelte.format.config.svelteAllowShorthand": true,
+  "svelte.plugin.svelte.format.config.svelteBracketNewLine": true,
+  "svelte.plugin.svelte.format.config.svelteIndentScriptAndStyle": true,
+  "svelte.plugin.svelte.format.config.svelteSortOrder": "options-scripts-markup-styles",
+  "svelte.plugin.svelte.format.config.svelteStrictMode": false,
+  "svelte.ui.svelteKitFilesContextMenu.enable": "always"
+}

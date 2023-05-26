@@ -1,4 +1,5 @@
-[`@Smelterial/Smelterial`]: https://npmjs.com/package/@smelterial/smelterial
+[`@Smelterial/Smelterial`]:
+  https://npmjs.com/package/@smelterial/smelterial
 [Smelterial Showcase]: https://smelterial.dev/showcase/you-icon
 
 # @Smelterial/You-Icon
@@ -10,8 +11,9 @@ down to the icon names.
 
 If not, no worries, go ahead.
 
-If you do want the full Material You library from Smelterial, you should install
-[`@Smelterial/Smelterial`]; it contains this component and more, along with some helpful tools.
+If you do want the full Material You library from Smelterial, you should
+install [`@Smelterial/Smelterial`]; it contains this component and more,
+along with some helpful tools.
 
 ## Try It Out
 
@@ -21,8 +23,9 @@ See an interactive showcase of this component on the [Smelterial Showcase].
 
 Include links to the Material Symbols styles in your app template.
 
-> In future, You-Icon will include the woff2 files and accompanying CSS for Google's Material
-> Symbols internally. Only icon styles which are used are included.
+> In future, You-Icon will include the woff2 files and accompanying CSS for
+> Google's Material Symbols internally. Only icon styles which are used are
+> included.
 
 ```svelte
 <script>
@@ -78,8 +81,9 @@ Include links to the Material Symbols styles in your app template.
 </Icon>
 ```
 
-If you have a custom icon set which adhere's to the same specification as Google's Material Symbols,
-you can make the following changes to use that instead:
+If you have a custom icon set which adhere's to the same specification as
+Google's Material Symbols, you can make the following changes to use that
+instead:
 
 ```svelte
 <script>

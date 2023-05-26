@@ -55,8 +55,8 @@ Nothing yet, check back later.
 
 ## Contributing and Contributors
 
-Smelterial has adopted [Svelte's Code of Conduct](./CODE_OF_CONDUCT.md). Please follow these
-guidelines in all your contributions to Smelterial.
+Smelterial has adopted [Svelte's Code of Conduct](./CODE_OF_CONDUCT.md).
+Please follow these guidelines in all your contributions to Smelterial.
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -86,11 +86,13 @@ guidelines in all your contributions to Smelterial.
 ## License
 
 Most of Smelterial's packages are licensed under the
-[GNU General Public License v3.0 (GPL-3.0)](https://www.gnu.org/licenses/gpl-3.0.en.html), including
-ones which are not published.
+[GNU General Public License v3.0 (GPL-3.0)](https://www.gnu.org/licenses/gpl-3.0.en.html),
+including ones which are not published.
 
-Some of Smelterial's packages may be licensed under different licenses, for example when including
-source code from other projects. We try to avoid this as much as possible.
+Some of Smelterial's packages may be licensed under different licenses, for
+example when including source code from other projects. We try to avoid
+this as much as possible.
 
-Smelterial's apps and sites are not licensed for use of any kind, though feel free to take
-inspiration from anything you see either on a site or in it's source code.
+Smelterial's apps and sites are not licensed for use of any kind, though
+feel free to take inspiration from anything you see either on a site or in
+it's source code.

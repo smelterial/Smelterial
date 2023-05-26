@@ -9,5 +9,8 @@ export const prettierConfig: Config = {
   printWidth: 100,
   plugins: [sveltePlugin],
   pluginSearchDirs: ["."],
-  overrides: [{ files: "*.svelte", options: { parser: "svelte" } }],
+  overrides: [
+    { files: "*.svelte", options: { parser: "svelte" } },
+    { files: "*.md", options: { printWidth: 75, parser: "markdown", proseWrap: "always" } },
+  ],
 };
