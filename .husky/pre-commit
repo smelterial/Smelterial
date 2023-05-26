@@ -1,6 +1,10 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+if [ "$PRIVATE_NO_HOOKS" = "true" ]; then
+  exit 0
+fi
+
 git config --local hooks.allowBypass false
 
 COMMITS_SINCE_PUSH=$(git log --pretty=oneline @{push}.. | wc -l)

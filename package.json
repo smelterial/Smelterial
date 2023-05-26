@@ -14,7 +14,8 @@
     "all": "turbo lint --filter=[HEAD^1] --filter=!*-TODO && turbo test --filter=[HEAD^1] --filter=!*-TODO && pnpm postinstall",
     "dev": "echo \"STARTING ALL DEV SERVERS\nUsing \\`--filter=\\\"<app name>\\\"\\` is recommended\" && sleep 1 && turbo dev --filter=!*-TODO",
     "prepare": "husky install",
-    "release": "pnpm all && changeset publish"
+    "release": "pnpm all && changeset publish",
+    "changeset": "pnpm exec changeset && git add ./.changeset/*.md && git stash -k && PRIVATE_NO_HOOKS=true git commit -m \":bookmark: (changeset): Changeset\" && git stash pop"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
