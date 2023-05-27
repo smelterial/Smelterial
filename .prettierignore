@@ -3,6 +3,8 @@
 **/.vercel
 **/dist
 **/node_modules
+CHANGELOG.md
+**/CHANGELOG.md
 .DS_Store
 .env
 .env.*
