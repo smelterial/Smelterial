@@ -35,13 +35,10 @@ jobs:
           version: 8.x
 
       - name: Install Dependencies
-        run: pnpm -r install --frozen-lockfile
+        run: pnpm -r install --frozen-lockfile && pnpm exec turbo build --filter=@smelterial/shared-config && pnpm install -r --frozen-lockfile
 
       - name: Build Everything
-        run: |
-          pnpm all
-          echo "ls -la /home/runner/work/Smelterial/Smelterial/node_modules/@smelterial/shared-config/"
-          ls -la /home/runner/work/Smelterial/Smelterial/node_modules/@smelterial/shared-config/
+        run: pnpm all
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
