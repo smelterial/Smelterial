@@ -40,7 +40,8 @@ jobs:
       - name: Build Everything
         run: |
           pnpm all
-          ls -la /home/runner/work/Smelterial/Smelterial/node_modules/@smelterial/shared-config
+          echo "ls -la /home/runner/work/Smelterial/Smelterial/node_modules/@smelterial/shared-config/"
+          ls -la /home/runner/work/Smelterial/Smelterial/node_modules/@smelterial/shared-config/
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
