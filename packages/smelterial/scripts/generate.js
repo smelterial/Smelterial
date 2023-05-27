@@ -266,7 +266,7 @@ function main() {
 
   fs.writeFileSync(
     path.resolve(process.cwd(), "package.json"),
-    JSON.stringify(packageJson, null, 2),
+    JSON.stringify(packageJson, null, 2) + "\n",
     "utf-8",
   );
 
