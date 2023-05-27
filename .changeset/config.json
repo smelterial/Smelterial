@@ -1,9 +1,19 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "smelterial/smelterial" }],
+  "changelog": [
+    "@changesets/changelog-github",
+    {
+      "repo": "smelterial/smelterial"
+    }
+  ],
   "commit": false,
   "fixed": [],
-  "linked": [],
+  "linked": [
+    [
+      "@smelterial/smelterial",
+      "@smelterial/you-icon"
+    ]
+  ],
   "access": "public",
   "baseBranch": "trunk",
   "updateInternalDependencies": "patch",

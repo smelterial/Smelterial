@@ -7,11 +7,20 @@
       "default": "./dist/index.js",
       "svelte": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./icon": {
+      "default": "./dist/icon.js",
+      "svelte": "./dist/icon.js",
+      "types": "./dist/icon.d.ts"
     }
   },
   "scripts": {
+    "postinstall": "pnpm build",
     "build": "NODE_NO_WARNINGS=1 node scripts/generate.js && tsc",
     "lint": "prettier --ignore-path ../../.prettierignore --check ."
+  },
+  "dependencies": {
+    "@smelterial/you-icon": "workspace:^"
   },
   "peerDependencies": {
     "svelte": "^3.59.1"
