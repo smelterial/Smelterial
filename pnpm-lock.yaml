@@ -138,6 +138,9 @@ importers:
         specifier: ^3.59.1
         version: 3.59.1
     devDependencies:
+      '@smelterial/shared-config':
+        specifier: workspace:^
+        version: link:../shared-config
       '@types/node':
         specifier: ^20.2.4
         version: 20.2.4
