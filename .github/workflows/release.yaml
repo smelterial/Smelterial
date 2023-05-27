@@ -49,3 +49,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.SMELTERIAL_PUBLISH_NPM }}
+          PRIVATE_NO_HOOKS: "true"
