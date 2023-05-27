@@ -15,8 +15,9 @@
     }
   },
   "scripts": {
-    "postinstall": "pnpm build",
-    "build": "NODE_NO_WARNINGS=1 node scripts/generate.js && tsc",
+    "postinstall": "pnpm generate",
+    "generate": "NODE_NO_WARNINGS=1 node scripts/generate.js",
+    "build": "pnpm generate && tsc",
     "lint": "prettier --check ."
   },
   "dependencies": {
