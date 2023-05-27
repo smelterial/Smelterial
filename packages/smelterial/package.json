@@ -17,7 +17,7 @@
   "scripts": {
     "postinstall": "pnpm build",
     "build": "NODE_NO_WARNINGS=1 node scripts/generate.js && tsc",
-    "lint": "prettier --ignore-path ../../.prettierignore --check ."
+    "lint": "prettier --check ."
   },
   "dependencies": {
     "@smelterial/you-icon": "workspace:^"
