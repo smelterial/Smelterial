@@ -157,13 +157,15 @@ function readChangesetFile(file) {
  * @param {string} file
  */
 function rebuildChangesetFile(data, file) {
-  const frontmatter = Object.entries(data.frontmatter).map(([packageName, bumpType]) => {
-    return `"${packageName}": ${bumpType}`;
-  });
+  if (!data.frontmatter["@smelterial/smelterial"]) return;
 
-  const newFileContents = `---\n${frontmatter.join("\n")}\n---${data.description}`;
-
-  fs.writeFileSync(file, newFileContents, "utf-8");
+  fs.writeFileSync(
+    file.replace(/\.md$/, "2.md"),
+    `---\n"@smelterial/smelterial": ${
+      data.frontmatter["@smelterial/smelterial"]
+    }\n---\n[AUTOMATED]: ${data.description.trim()}\n`,
+    "utf-8",
+  );
 }
 
 /**
