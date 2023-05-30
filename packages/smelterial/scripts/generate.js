@@ -8,22 +8,28 @@ main();
 
 /**
  * @typedef {keyof typeof packageJson.dependencies} ResolvablePackageName
+ * @typedef {`${ResolvablePackageName}${string}`} ResolvablePackageExport
+ */
+/**
+ * @template {string} [T=string]
+ * @typedef {{
+ *   default: `./dist/${T}.js`,
+ *   svelte: `./dist/${T}.js`,
+ *   types: `./dist/${T}.d.ts`,
+ * }} PackageJsonExports
  */
 
 /**
  * @template {string} T
- * @param {T} colloquialPackageName
- * @returns {{
-    default: `./dist/${T}.js`,
-    svelte: `./dist/${T}.js`,
-    types: `./dist/${T}.d.ts`,
-  }}
+ * @param {T|`./${T}`} colloquialPackageName
+ * @returns {PackageJsonExports<T>}
  */
 function generatePackageJsonExportsForPackage(colloquialPackageName) {
+  const normalizedPackageName = /**@type {T}*/ (colloquialPackageName.replace(/^\.\//g, ""));
   return {
-    default: `./dist/${colloquialPackageName}.js`,
-    svelte: `./dist/${colloquialPackageName}.js`,
-    types: `./dist/${colloquialPackageName}.d.ts`,
+    default: `./dist/${normalizedPackageName}.js`,
+    svelte: `./dist/${normalizedPackageName}.js`,
+    types: `./dist/${normalizedPackageName}.d.ts`,
   };
 }
 
@@ -81,14 +87,16 @@ function generateColloquialNameForPackage(resolvablePackageName) {
 }
 
 /**
- * @param {ResolvablePackageName} resolvablePackageName
+ * @param {ResolvablePackageExport} resolvablePackageName
  * @param {string} colloquialPackageName
+ * @returns {string}
  */
 function writeSrcFileForPackage(resolvablePackageName, colloquialPackageName) {
-  fs.writeFileSync(
-    path.resolve(process.cwd(), "src", `${colloquialPackageName}.ts`),
-    `export * from "${resolvablePackageName}";`,
-  );
+  const srcFileExtensionless = path.resolve(process.cwd(), "src", `${colloquialPackageName}`);
+  if (!fs.existsSync(path.dirname(srcFileExtensionless)))
+    fs.mkdirSync(path.dirname(srcFileExtensionless), { recursive: true });
+  fs.writeFileSync(`${srcFileExtensionless}.ts`, `export * from "${resolvablePackageName}";`);
+  return `${srcFileExtensionless}.js`;
 }
 
 /**
@@ -232,10 +240,70 @@ function spikeChangesets(workspaceDependencies) {
  */
 function writeIndexFile(colloquialPackageNames) {
   const indexFileContents = colloquialPackageNames
-    .map((colloquialPackageName) => `export * from "./${colloquialPackageName}.js";`)
+    .map((colloquialPackageName) => `export * from "./${colloquialPackageName}";`)
     .join("\n");
 
   fs.writeFileSync(path.resolve(process.cwd(), "src", "index.ts"), indexFileContents);
+}
+
+/**
+ * @template {string} T
+ * @param {T} colloquialPackageName
+ * @returns {{ [key: `./${T}`]: PackageJsonExports<T> }}
+ */
+function generateStarExportsForPackage(colloquialPackageName) {
+  return {
+    [`./${colloquialPackageName}`]: generatePackageJsonExportsForPackage(colloquialPackageName),
+  };
+}
+
+/**
+ * @template {string} T
+ * @param {ResolvablePackageName} resolvablePackageName
+ * @param {T} colloquialPackageName
+ * @returns {{ exports: { [key in `./${T}${string}`]: PackageJsonExports }; indexFile: string }}
+ */
+function generateForwardExportsForPackage(resolvablePackageName, colloquialPackageName) {
+  /**@type {{ [key: string]: PackageJsonExports }}*/
+  const resolvedPackageExports = JSON.parse(
+    fs.readFileSync(
+      path.resolve(
+        PROJECT_ROOT,
+        findWorkspacePathForPackage(resolvablePackageName),
+        "package.json",
+      ),
+      "utf-8",
+    ),
+  ).exports;
+
+  const packageExports = /**@type {{ [key in `./${T}${string}`]: PackageJsonExports }}*/ ({});
+  let indexFile = "";
+  for (const key of Object.keys(resolvedPackageExports)) {
+    if (!key.startsWith(".")) {
+      throw new Error(
+        `Unexpected key in exports: ${JSON.stringify({
+          package: resolvablePackageName,
+          key,
+        })}`,
+      );
+    }
+
+    if (key === ".") {
+      const generated = generateStarExportsForPackage(colloquialPackageName);
+      Object.assign(packageExports, generated);
+      indexFile = writeSrcFileForPackage(resolvablePackageName, colloquialPackageName);
+      continue;
+    }
+
+    const newKey = `${key.replace(/^\./, `./${colloquialPackageName}`)}`;
+    packageExports[newKey] = generatePackageJsonExportsForPackage(newKey);
+    writeSrcFileForPackage(
+      /**@type {ResolvablePackageExport}*/ (key.replace(/^\./, resolvablePackageName)),
+      newKey,
+    );
+  }
+
+  return { exports: packageExports, indexFile };
 }
 
 function main() {
@@ -252,13 +320,15 @@ function main() {
 
   const packageExports = packageJson.exports;
 
+  const indexFiles = [];
+
   for (const resolvablePackageName of workspaceDependencies) {
-    const colloquialPackageName = generateColloquialNameForPackage(resolvablePackageName);
-
-    packageExports[`./${colloquialPackageName}`] =
-      generatePackageJsonExportsForPackage(colloquialPackageName);
-
-    writeSrcFileForPackage(resolvablePackageName, colloquialPackageName);
+    const exportsForward = generateForwardExportsForPackage(
+      resolvablePackageName,
+      generateColloquialNameForPackage(resolvablePackageName),
+    );
+    Object.assign(packageExports, exportsForward.exports);
+    indexFiles.push(exportsForward.indexFile);
   }
 
   spikeChangesets(workspaceDependencies);
@@ -273,8 +343,6 @@ function main() {
   );
 
   writeIndexFile(
-    Object.keys(packageExports)
-      .filter((key) => key !== ".")
-      .map((key) => key.slice(2)),
+    indexFiles.map((indexFile) => path.relative(path.resolve(process.cwd(), "src"), indexFile)),
   );
 }
