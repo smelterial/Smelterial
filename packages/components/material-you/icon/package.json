@@ -28,10 +28,6 @@
       "svelte": "./dist/Icon.svelte",
       "types": "./dist/Icon.svelte.d.ts"
     },
-    "./IconConfig.svelte": {
-      "svelte": "./dist/IconConfig.svelte",
-      "types": "./dist/IconConfig.svelte.d.ts"
-    },
     "./showcase": {
       "svelte": "./dist/showcase/+page.svelte",
       "types": "./dist/showcase/+page.svelte.d.ts"
