@@ -23,12 +23,12 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-vercel": "^2.4.3",
-    "@sveltejs/kit": "^1.18.0",
-    "@types/node": "^20.2.4",
+    "@sveltejs/kit": "^1.20.0",
+    "@types/node": "^20.2.5",
     "@types/prettier": "^2.7.2",
     "prettier": "^2.8.8",
     "svelte": "^3.59.1",
     "typescript": "^5.0.4",
-    "vite": "^4.3.8"
+    "vite": "^4.3.9"
   }
 }
