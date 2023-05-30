@@ -18,6 +18,7 @@ Here's a list of everything that needs filling in:
 - README.md showcase url
 - README.md h1
 - README.md description
+- README.md usage
 - package.json name
 - package.json version
 - package.json private
@@ -36,3 +37,5 @@ along with some helpful tools.
 ## Try It Out
 
 See an interactive showcase of this component on the [Smelterial Showcase].
+
+## Usage
