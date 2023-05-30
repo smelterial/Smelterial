@@ -189,12 +189,9 @@ function ensureChangesetConfigLinks(workspaceDependencies) {
     ([k]) => k !== "@smelterial/smelterial",
   );
 
-  const linksFromWorkspaceDependencies = workspaceDependencies.map((workspaceDependency) => [
-    "@smelterial/smelterial",
-    workspaceDependency,
-  ]);
+  const smelterialLink = ["@smelterial/smelterial", `(${workspaceDependencies.join("|")})`];
 
-  changesetConfig.linked = [...notLinkedToHere, ...linksFromWorkspaceDependencies];
+  changesetConfig.linked = [...notLinkedToHere, smelterialLink];
 
   fs.writeFileSync(
     path.resolve(PROJECT_ROOT, ".changeset", "config.json"),
