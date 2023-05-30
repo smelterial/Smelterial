@@ -5,6 +5,9 @@
       "dependsOn": ["sync", "^build"],
       "outputs": [".svelte-kit/**", ".vercel/**", "dist/**"]
     },
+    "@smelterial/smelterial#build": {
+      "outputs": ["dist/**", "src/**", ".changesets/**"]
+    },
     "dev": {
       "dependsOn": ["sync", "^build"],
       "cache": false,
