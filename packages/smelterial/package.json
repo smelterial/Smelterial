@@ -17,11 +17,6 @@
       "default": "./dist/icon/Icon.svelte.js",
       "svelte": "./dist/icon/Icon.svelte.js",
       "types": "./dist/icon/Icon.svelte.d.ts"
-    },
-    "./theme": {
-      "default": "./dist/theme.js",
-      "svelte": "./dist/theme.js",
-      "types": "./dist/theme.d.ts"
     }
   },
   "scripts": {
@@ -31,16 +26,15 @@
     "lint": "prettier --check ."
   },
   "dependencies": {
-    "@smelterial/you-icon": "workspace:^",
-    "@smelterial/you-theme": "workspace:^"
+    "@smelterial/you-icon": "workspace:*"
   },
   "peerDependencies": {
     "svelte": "^3.59.1"
   },
   "devDependencies": {
-    "@smelterial/shared-config": "workspace:^",
-    "@types/node": "^20.2.5",
+    "@smelterial/shared-config": "workspace:*",
+    "@types/node": "^20.3.0",
     "prettier": "^2.8.8",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.3"
   }
 }

@@ -13,6 +13,7 @@
     "sync": "turbo sync --filter=!*-TODO",
     "test": "turbo test --filter=!*-TODO",
     "all": "turbo lint --filter=[HEAD^1] --filter=!*-TODO && turbo test --filter=[HEAD^1] --filter=!*-TODO && pnpm postinstall",
+    "all:force": "turbo lint --filter=[HEAD^1] --filter=!*-TODO --force && turbo test --filter=[HEAD^1] --filter=!*-TODO --force && pnpm postinstall",
     "dev": "echo \"STARTING ALL DEV SERVERS\nUsing \\`--filter=\\\"<app name>\\\"\\` is recommended\" && sleep 1 && turbo dev --filter=!*-TODO",
     "prepare": "husky install",
     "release": "changeset publish",
@@ -22,12 +23,12 @@
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.1",
     "@smelterial/shared-config": "workspace:*",
-    "@types/node": "^20.2.5",
+    "@types/node": "^20.3.0",
     "all-contributors-cli": "^6.26.0",
-    "gitmoji-cli": "^8.2.3",
+    "gitmoji-cli": "^8.3.0",
     "husky": "^8.0.3",
     "prettier": "^2.8.8",
     "prettier-plugin-svelte": "^2.10.1",
-    "turbo": "^1.9.9"
+    "turbo": "^1.10.3"
   }
 }
