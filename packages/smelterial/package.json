@@ -18,20 +18,10 @@
       "svelte": "./dist/icon/Icon.svelte.js",
       "types": "./dist/icon/Icon.svelte.d.ts"
     },
-    "./icon/showcase": {
-      "default": "./dist/icon/showcase.js",
-      "svelte": "./dist/icon/showcase.js",
-      "types": "./dist/icon/showcase.d.ts"
-    },
     "./theme": {
       "default": "./dist/theme.js",
       "svelte": "./dist/theme.js",
       "types": "./dist/theme.d.ts"
-    },
-    "./theme/showcase": {
-      "default": "./dist/theme/showcase.js",
-      "svelte": "./dist/theme/showcase.js",
-      "types": "./dist/theme/showcase.d.ts"
     }
   },
   "scripts": {

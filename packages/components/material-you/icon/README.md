@@ -1,6 +1,5 @@
 [`@Smelterial/Smelterial`]:
   https://npmjs.com/package/@smelterial/smelterial
-[Smelterial Showcase]: https://smelterial.dev/showcase/you-icon
 
 # @Smelterial/You-Icon
 
@@ -14,10 +13,6 @@ If not, no worries, go ahead.
 If you do want the full Material You library from Smelterial, you should
 install [`@Smelterial/Smelterial`]; it contains this component and more,
 along with some helpful tools.
-
-## Try It Out
-
-See an interactive showcase of this component on the [Smelterial Showcase].
 
 ## Usage
 
