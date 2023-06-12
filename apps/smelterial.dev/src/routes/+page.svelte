@@ -1,6 +1,7 @@
 <script lang="ts">
   import { sequentialKeys } from "$lib/sequentialKeys.js";
   import { onMount } from "svelte";
+  import type { Writable } from "svelte/store";
 
   let success: Writable<boolean>;
 
