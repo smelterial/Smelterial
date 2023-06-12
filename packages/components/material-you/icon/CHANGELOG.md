@@ -1,5 +1,11 @@
 # @smelterial/you-icon
 
+## 0.4.0
+
+### Patch Changes
+
+- [#14](https://github.com/smelterial/Smelterial/pull/14) [`5900f26`](https://github.com/smelterial/Smelterial/commit/5900f264f82cf2e32d7412853a0b696231d83f4c) Thanks [@WillsterJohnson](https://github.com/WillsterJohnson)! - remove broken export
+
 ## 0.2.0
 
 ### Minor Changes
